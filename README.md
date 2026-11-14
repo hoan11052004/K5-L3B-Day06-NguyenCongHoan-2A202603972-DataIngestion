@@ -81,26 +81,7 @@ C          | all    | 14/20 (70.0%)   | 18/20 (90.0%)      | 230      | 88.90
 
 ---
 
-## 4. Hướng dẫn chạy và tái lập (Quickstart)
 
-### Bước 1: Khởi động Vector Database (PostgreSQL + pgvector)
-```bash
-cd starter
-docker compose -p day6_student_starter up -d --wait
-```
-
-### Bước 2: Thiết lập môi trường và cấu hình
-Cấu hình API key trong `starter/.env` (hoặc sử dụng local fallback tự động):
-```env
-OPENROUTER_API_KEY=sk-or-v1-...
-EMBEDDING_MODEL=qwen/qwen3-embedding-8b
-DATABASE_URL=postgresql://day6:day6_local_only@127.0.0.1:55433/day6_lab
-```
-
-### Bước 3: Chạy toàn bộ pipeline chỉ với 1 lệnh
-Từ thư mục `starter/`:
-```bash
-python -m src.run
 ```
 Hoặc từ thư mục gốc của repository:
 ```bash
