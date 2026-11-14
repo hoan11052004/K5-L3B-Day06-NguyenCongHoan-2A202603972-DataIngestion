@@ -124,6 +124,8 @@
 
 ### Định hướng cải tiến mở rộng
 
-- **Hybrid Retrieval (Dense + BM25):** Tích hợp tìm kiếm từ khóa BM25 kết hợp vector cosine similarity và thuật toán Reciprocal Rank Fusion (RRF) để tối ưu hóa hơn nữa cho các câu hỏi tra cứu thuật ngữ hiếm.
-- **Hierarchical Chunking (Parent-Child Indexing):** Lưu trữ các chunk con nhỏ (sentence-level) để tăng độ nhạy tìm kiếm vector, nhưng trả về chunk cha lớn (paragraph/section-level) cho LLM để đảm bảo tính toàn vẹn của ngữ cảnh grounding.
+Cấu hình D (Semantic / Adaptive Chunking theo biến thiên ngữ nghĩa):
+
+Thông số: Cắt theo từng câu, đo Cosine similarity giữa 2 câu liên tiếp, ngắt chunk tự động khi độ tương đồng tụt dưới similarity_threshold = 0.75.
+Tác dụng: Thay vì chia theo ký tự cứng nhắc, hệ thống tự động nhận biết khi nào bài giảng chuyển sang chủ đề mới để ngắt chunk, bảo đảm một chunk chỉ chứa đúng 1 chủ đề thuần nhất.
 
