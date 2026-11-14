@@ -1,47 +1,110 @@
 # Day 06 · Data Ingestion Engineering
 
-**Lab cá nhân** · **4 giờ** · **Dữ liệu tự chọn**
+**Học viên:** Nguyễn Công Hoàn  
+**MSSV:** 2A202603972  
+**Lớp:** L3B  
+**Repo:** `K5-L3B-Day06-NguyenCongHoan-2A202603972-DataIngestionEngineering`  
+**Báo cáo cá nhân:** [report/individual/2A202603972_NguyenCongHoan.md](report/individual/2A202603972_NguyenCongHoan.md)  
 
-Biến tài liệu thành kho tri thức có thể truy xuất cho AI agent, rồi đo xem cách chuẩn bị dữ liệu nào hiệu quả nhất.
+---
 
-| 📄 Dữ liệu | 🧩 Chiến lược | 🎯 Benchmark |
-|---|---|---|
-| Tối thiểu **30 trang nội dung** | Tối thiểu **3 cấu hình** | Tối thiểu **20 câu hỏi** |
+## 1. Giới thiệu tổng quan
 
-## Bắt đầu nhanh
+Dự án hiện thực trọn vẹn quy trình **Data Ingestion Engineering** biến tài liệu kỹ thuật dài thành kho tri thức ngữ nghĩa (Semantic Knowledge Store) cho AI agent, lưu trữ bền vững trong cơ sở dữ liệu **PostgreSQL 16 + pgvector** (kèm fallback ChromaDB), và đánh giá so sánh có kiểm soát ba chiến lược ingestion trên bộ benchmark 20 câu hỏi (15 Dev / 5 Test) theo đúng 5 tiêu chí của môn học.
 
-Dùng [starter PostgreSQL + pgvector](starter/README.md) để dựng database và hoàn thiện các hàm TODO, hoặc tự chọn vector store tương đương. Starter chỉ là khung: **bạn tự hiện thực pipeline và benchmark**.
+| 📄 Dữ liệu thực tế | 🧩 Ba chiến lược | 🎯 Bộ Benchmark | ⚙️ Vector Database |
+|---|---|---|---|
+| **73 trang nội dung** (144.872 ký tự) từ Sách Deep Learning (Chương 5: ML cơ bản) | Strategy A (Fixed-size 500/50)<br>Strategy B (Paragraph max 800)<br>Strategy C (Paragraph + Filter) | **20 câu hỏi** có gold evidence (15 Dev / 5 Test, 4 câu filter metadata) | **PostgreSQL 16 + pgvector** (4096-dim `qwen3-embedding-8b` qua OpenRouter) |
 
-## 1. Xây pipeline
+---
 
-![Đọc tài liệu, chuẩn hóa, chia chunk, tạo vector, lưu và kiểm tra](assets/ingestion-pipeline.svg)
+## 2. Kết quả thực nghiệm
 
-Chọn tài liệu được phép sử dụng; giữ **ID tài liệu, nguồn, trang/vị trí** và metadata phù hợp. Dùng embedding model thật qua API hoặc chạy local; lưu và truy xuất bằng pgvector, Qdrant, Chroma hoặc một store tương đương.
+```text
+==================================================================
+KẾT QUẢ ĐÁNH GIÁ BENCHMARK RETRIEVAL TRÊN 3 CHIẾN LƯỢC
+==================================================================
+Strategy   | Split  | Hit@1           | Evidence Hit@3     | Chunks   | Time (s)  
+---------------------------------------------------------------------------
+A          | dev    | 12/15 (80.0%)   | 15/15 (100.0%)     | 347      | 73.93     
+A          | test   | 2/5 (40.0%)     | 4/5 (80.0%)        | 347      | 73.93     
+A          | all    | 14/20 (70.0%)   | 19/20 (95.0%)      | 347      | 73.93     
+B          | dev    | 13/15 (86.7%)   | 15/15 (100.0%)     | 230      | 88.90     
+B          | test   | 2/5 (40.0%)     | 5/5 (100.0%)       | 230      | 88.90     
+B          | all    | 15/20 (75.0%)   | 20/20 (100.0%)     | 230      | 88.90     
+C          | dev    | 12/15 (80.0%)   | 13/15 (86.7%)      | 230      | 88.90     
+C          | test   | 2/5 (40.0%)     | 5/5 (100.0%)       | 230      | 88.90     
+C          | all    | 14/20 (70.0%)   | 18/20 (90.0%)      | 230      | 88.90     
+```
 
-## 2. So sánh và đánh giá
+### Đánh giá 5 Khía cạnh chất lượng (Rubric 100 điểm)
+1. **Độ chính xác truy xuất (Retrieval Accuracy):** Strategy B đạt điểm tuyệt đối **100% Evidence Hit@3** trên cả tập Dev và tập Test (20/20 câu hỏi).
+2. **Tính mạch lạc (Chunk Coherence):** Strategy B và C đạt điểm tối đa **2.00 / 2.0** (so với 0.40/2 của Strategy A do A bị cắt đứt từ/câu cơ học).
+3. **Tính hữu dụng metadata (Metadata Usefulness):** 100% bản ghi kiểm tra (15/15) có metadata đúng và đủ; tỷ lệ tuân thủ filter đạt **100%** (1/1 ở Test set, 4/4 trên toàn bộ benchmark).
+4. **Chất lượng Grounding:** Strategy B và C đạt **2.00 / 2.0** trên tập test độc lập (5/5 câu đạt mức 2, cung cấp đủ ngữ cảnh và điều kiện để trả lời).
+5. **Tác động chiến lược (Strategy Impact):** Strategy B giảm **33.7% số lượng chunk** so với A (từ 347 xuống 230 chunks), tiết kiệm dung lượng lưu trữ vector và cải thiện chất lượng grounding rõ rệt.
 
-![Ba chiến lược được đánh giá trên cùng corpus và benchmark dev/test](assets/benchmark-workflow.svg)
+---
 
-Dùng cùng dữ liệu, model và câu hỏi cho cả ba cấu hình. Tách **15 câu dev / 5 câu test** trước khi chạy; chọn cấu hình trên dev, rồi đánh giá test sau khi cố định. Mỗi câu hỏi cần có đoạn bằng chứng và trang nguồn; thiết kế bộ câu hỏi và đánh giá theo [BENCHMARK.md](BENCHMARK.md).
+## 3. Cấu trúc mã nguồn
 
-Đánh giá theo năm khía cạnh: **độ chính xác truy xuất**, **tính mạch lạc của chunk**, **tính hữu dụng của metadata**, **chất lượng grounding** và **tác động của chiến lược dữ liệu**. Giải thích lựa chọn bằng kết quả, ví dụ lỗi và các đánh đổi.
+```text
+├── STUDENT.md                                      # Thông tin học viên và commit chốt
+├── README.md                                       # Hướng dẫn setup, cấu trúc dự án và kết quả
+├── data/
+│   ├── dlbookvn_chap05.pdf                         # Corpus 75 trang (73 trang nội dung)
+│   └── manifest.json                               # Manifest chi tiết nguồn và số ký tự
+├── benchmark/
+│   └── benchmark.json                              # Bộ 20 câu hỏi (15 Dev / 5 Test)
+├── artifacts/
+│   └── experiment_log.csv                          # Nhật ký thực nghiệm 3 chiến lược
+├── results/
+│   ├── benchmark_summary.json                      # Thống kê Hit@1, Hit@3
+│   ├── traces_strategy_A.json                      # Trace top-3 của Strategy A
+│   ├── traces_strategy_B.json                      # Trace top-3 của Strategy B
+│   ├── traces_strategy_C.json                      # Trace top-3 của Strategy C
+│   └── manual_audit.json                           # Đánh giá thủ công Coherence & Grounding
+├── report/individual/
+│   └── 2A202603972_NguyenCongHoan.md               # Báo cáo cá nhân chi tiết
+├── src/ & starter/src/
+│   ├── models.py                                   # Data models (DocumentPage, Chunk, Hit, Trace)
+│   ├── ingestion.py                                # Đọc PDF, trích xuất text, chuẩn hóa Unicode
+│   ├── chunking.py                                 # Fixed-size và By-paragraph chunking
+│   ├── embeddings.py                               # Embedder OpenRouter API & local fallback
+│   ├── store.py                                    # PgVectorStore (PostgreSQL + pgvector)
+│   ├── evaluation.py                               # Đánh giá Hit@1, Hit@3 và xuất trace
+│   └── run.py                                      # Điều phối toàn bộ pipeline
+└── starter/
+    ├── docker-compose.yml                          # PostgreSQL 16 + pgvector container
+    └── .env                                        # Cấu hình API key và Database URL
+```
 
-## 3. Chuẩn bị bài nộp
+---
 
-1. Chạy pipeline và lưu cấu hình, kết quả top-3, trace cùng nhãn đánh giá thủ công.
-2. Điền [thông tin học viên](STUDENT.md), [nhật ký thí nghiệm](artifacts/experiment_log.csv) và bản sao [mẫu báo cáo cá nhân](report/individual/MSSV_HoTen.md).
-3. Kiểm tra mã nguồn, cách chạy, manifest dữ liệu và checklist trong [SUBMISSION.md](SUBMISSION.md).
+## 4. Hướng dẫn chạy và tái lập (Quickstart)
 
-## Tài liệu hướng dẫn
+### Bước 1: Khởi động Vector Database (PostgreSQL + pgvector)
+```bash
+cd starter
+docker compose -p day6_student_starter up -d --wait
+```
 
-| Bạn cần tìm | Tài liệu |
-|---|---|
-| Setup baseline PostgreSQL + pgvector | [starter/README.md](starter/README.md) |
-| Các bước làm và cách tính chỉ số | [GUIDE.md](GUIDE.md) |
-| Tiến độ trong 4 giờ | [CHECKPOINTS.md](CHECKPOINTS.md) |
-| Năm tiêu chí benchmark và bộ câu hỏi | [BENCHMARK.md](BENCHMARK.md) |
-| Tiêu chí chấm điểm | [RUBRIC.md](RUBRIC.md) |
-| Quy tắc sử dụng dữ liệu, AI và API | [RULES.md](RULES.md) |
-| Cách nộp bài | [SUBMISSION.md](SUBMISSION.md) |
+### Bước 2: Thiết lập môi trường và cấu hình
+Cấu hình API key trong `starter/.env` (hoặc sử dụng local fallback tự động):
+```env
+OPENROUTER_API_KEY=sk-or-v1-...
+EMBEDDING_MODEL=qwen/qwen3-embedding-8b
+DATABASE_URL=postgresql://day6:day6_local_only@127.0.0.1:55433/day6_lab
+```
 
-[data/format-example.json](data/format-example.json) chỉ minh họa định dạng, không phải corpus đủ điều kiện. Phần xử lý và benchmark do bạn tự hiện thực; không bắt buộc xây chatbot.
+### Bước 3: Chạy toàn bộ pipeline chỉ với 1 lệnh
+Từ thư mục `starter/`:
+```bash
+python -m src.run
+```
+Hoặc từ thư mục gốc của repository:
+```bash
+python -m starter.src.run
+```
+
+Toàn bộ quá trình ingestion 3 chiến lược, embedding, upsert vào PostgreSQL, thực thi benchmark và xuất trace sẽ được tự động hoàn tất và hiển thị bảng kết quả tổng hợp.

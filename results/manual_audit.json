@@ -1,0 +1,129 @@
+{
+  "coherence_audit_10_samples": [
+    {
+      "page": 3,
+      "section": "5.1 Learning algorithms",
+      "strategy_A": {"score": 0, "reason": "Bị cắt đứt từ ở cuối chunk: 'được đo bằng phương pháp , được cả', mất vế 'cải thiện'."},
+      "strategy_B": {"score": 2, "reason": "Đoạn văn trọn vẹn, kết thúc tròn câu, giữ đầy đủ định nghĩa Mitchell 1997."},
+      "strategy_C": {"score": 2, "reason": "Cùng cấu trúc chunking với Strategy B, trọn vẹn và mạch lạc."}
+    },
+    {
+      "page": 4,
+      "section": "5.1 Learning algorithms",
+      "strategy_A": {"score": 0, "reason": "Bị cắt đứt từ 'bở' ở cuối chunk ('được mô tả bở'), mất nghĩa."},
+      "strategy_B": {"score": 2, "reason": "Nhóm đoạn văn hoàn chỉnh về tác vụ phân loại và phân phối xác suất trên các lớp."},
+      "strategy_C": {"score": 2, "reason": "Cùng cấu trúc chunking với Strategy B, rõ ràng từng luận điểm."}
+    },
+    {
+      "page": 7,
+      "section": "5.1 Learning algorithms",
+      "strategy_A": {"score": 0, "reason": "Cắt đứt trích dẫn tác giả '[Luo e', mất thông tin tham chiếu khoa học."},
+      "strategy_B": {"score": 2, "reason": "Bảo toàn câu chuyện tác vụ tổng hợp và lấy mẫu dữ liệu mới."},
+      "strategy_C": {"score": 2, "reason": "Cùng cấu trúc chunking với Strategy B, trọn vẹn ý nghĩa."}
+    },
+    {
+      "page": 10,
+      "section": "5.1.3 Kinh nghiệm",
+      "strategy_A": {"score": 1, "reason": "Cắt ngang phần mô tả tập dữ liệu hoa Diên Vĩ, mất phần đặc trưng kích thước đài hoa."},
+      "strategy_B": {"score": 2, "reason": "Phân chia rõ ràng mô tả cấu trúc tập dữ liệu 150 mẫu Iris."},
+      "strategy_C": {"score": 2, "reason": "Cùng cấu trúc chunking với Strategy B, cấu trúc phân tầng rõ ràng."}
+    },
+    {
+      "page": 16,
+      "section": "5.2 Capacity, Overfitting, Underfitting",
+      "strategy_A": {"score": 0, "reason": "Bị cắt đứt từ 'đại' ở cuối chunk ('giá trị thực của đại'), câu văn dang dở."},
+      "strategy_B": {"score": 2, "reason": "Giữ nguyên vẹn định nghĩa hệ số chặn là hệ số tự do (bias) của phép biến đổi tịnh tiến."},
+      "strategy_C": {"score": 2, "reason": "Cùng cấu trúc chunking với Strategy B, đọc hiểu độc lập tốt."}
+    },
+    {
+      "page": 25,
+      "section": "5.2 Capacity, Overfitting, Underfitting",
+      "strategy_A": {"score": 0, "reason": "Cắt đứt từ 't' cuối chunk ('phân phối xác suất mà t'), mất chủ ngữ 'ta'."},
+      "strategy_B": {"score": 2, "reason": "Trọn vẹn tình huống phân tích định lý No Free Lunch."},
+      "strategy_C": {"score": 2, "reason": "Cùng cấu trúc chunking với Strategy B, giữ đầy đủ thông tin kỹ thuật."}
+    },
+    {
+      "page": 29,
+      "section": "5.3 Siêu tham số và tập xác thực",
+      "strategy_A": {"score": 1, "reason": "Cắt đứt câu sau từ liên từ 'Vì', mất mệnh đề nguyên nhân phía sau."},
+      "strategy_B": {"score": 2, "reason": "Giữ trọn vẹn vai trò của tập validation trong cập nhật siêu tham số."},
+      "strategy_C": {"score": 2, "reason": "Cùng cấu trúc chunking với Strategy B, chuẩn xác ngữ cảnh học máy."}
+    },
+    {
+      "page": 39,
+      "section": "5.5 Maximum likelihood estimation",
+      "strategy_A": {"score": 0, "reason": "Cắt ngang từ 'lư' ('khi số lư'), mất thông tin số lượng mẫu."},
+      "strategy_B": {"score": 2, "reason": "Đầy đủ bối cảnh hội tụ theo xác suất và định nghĩa tính nhất quán (consistency)."},
+      "strategy_C": {"score": 2, "reason": "Cùng cấu trúc chunking với Strategy B, ngữ cảnh toán học hoàn chỉnh."}
+    },
+    {
+      "page": 51,
+      "section": "5.7 Các thuật toán học có giám sát",
+      "strategy_A": {"score": 1, "reason": "Cắt giữa chừng mô tả bài toán tối ưu SVM, mất phần hàm đối ngẫu."},
+      "strategy_B": {"score": 2, "reason": "Mô tả đầy đủ thủ thuật chọn hàm lõi (kernel trick) và 2 lý do tại sao nó mạnh mẽ."},
+      "strategy_C": {"score": 2, "reason": "Cùng cấu trúc chunking với Strategy B, thông tin đầy đủ."}
+    },
+    {
+      "page": 66,
+      "section": "5.11 Những thách thức thúc đẩy sự phát triển của DL",
+      "strategy_A": {"score": 1, "reason": "Cắt ngang chú thích Hình 5.9 ở đoạn nội suy vùng lân cận."},
+      "strategy_B": {"score": 2, "reason": "Mỗi đoạn giải thích hiểm họa số chiều lớn tăng theo cấp số mũ nằm trọn vẹn."},
+      "strategy_C": {"score": 2, "reason": "Cùng cấu trúc chunking với Strategy B, tra cứu độc lập hoàn hảo."}
+    }
+  ],
+  "coherence_summary": {
+    "strategy_A": {"mean_score": 0.40, "scores": [0, 0, 0, 1, 0, 0, 1, 0, 1, 1]},
+    "strategy_B": {"mean_score": 2.00, "scores": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]},
+    "strategy_C": {"mean_score": 2.00, "scores": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2]}
+  },
+  "grounding_audit_5_test_questions": {
+    "strategy_A": {
+      "q16": {"score": 0, "reason": "Top-3 trượt trang gold 18 (Rank 1: page 8, Rank 2: page 25), không có bằng chứng để trả lời."},
+      "q17": {"score": 1, "reason": "Trúng trang 51 ở Rank 3 nhưng chunk 500 ký tự bị cắt đứt giữa chừng, thiếu lý do thứ 2 của hàm lõi."},
+      "q18": {"score": 2, "reason": "Trúng trang 5 ở Rank 1, có đầy đủ bằng chứng chuỗi ký tự trong tác vụ dịch máy."},
+      "q19": {"score": 2, "reason": "Trúng trang 36 ở Rank 1, có đầy đủ giải thích tính bất định khi số lượng mẫu hữu hạn."},
+      "q20": {"score": 2, "reason": "Trúng trang 3 ở Rank 3, có đầy đủ mục tiêu vượt qua trở ngại của ML truyền thống."},
+      "distribution": {"0": 1, "1": 1, "2": 3},
+      "mean_score": 1.40
+    },
+    "strategy_B": {
+      "q16": {"score": 2, "reason": "Rank 3 trúng trang 18, đoạn văn hoàn chỉnh về khả năng giảm sai số huấn luyện và thu hẹp sai số kiểm thử."},
+      "q17": {"score": 2, "reason": "Rank 2 trúng trang 51, đoạn văn hoàn chỉnh chứa đầy đủ cả 2 lý do tại sao hàm lõi là công cụ mạnh mẽ."},
+      "q18": {"score": 2, "reason": "Rank 1 trúng trang 5, đoạn văn trọn vẹn về định nghĩa đầu vào tác vụ dịch máy."},
+      "q19": {"score": 2, "reason": "Rank 1 trúng trang 36, đoạn văn hoàn chỉnh về sự bất định của ước lượng thống kê."},
+      "q20": {"score": 2, "reason": "Rank 2 trúng trang 3, đoạn văn hoàn chỉnh về động lực phát triển Deep Learning."},
+      "distribution": {"0": 0, "1": 0, "2": 5},
+      "mean_score": 2.00
+    },
+    "strategy_C": {
+      "q16": {"score": 2, "reason": "Câu không dùng filter, top-3 giống Strategy B, đầy đủ bằng chứng."},
+      "q17": {"score": 2, "reason": "Câu không dùng filter, top-3 giống Strategy B, đầy đủ bằng chứng."},
+      "q18": {"score": 2, "reason": "Có filter section='5.1 Learning algorithms', Rank 1 trúng trang 5 xuất sắc, loại bỏ hoàn toàn nhiễu từ các section khác."},
+      "q19": {"score": 2, "reason": "Câu không dùng filter, top-3 giống Strategy B, đầy đủ bằng chứng."},
+      "q20": {"score": 2, "reason": "Câu không dùng filter, top-3 giống Strategy B, đầy đủ bằng chứng."},
+      "distribution": {"0": 0, "1": 0, "2": 5},
+      "mean_score": 2.00
+    }
+  },
+  "metadata_usefulness_audit": {
+    "strategy_A": {
+      "records_checked": 15,
+      "valid_records": 15,
+      "accuracy_rate": "15/15 (100%)",
+      "filter_compliance": "N/A (không áp dụng filter)"
+    },
+    "strategy_B": {
+      "records_checked": 15,
+      "valid_records": 15,
+      "accuracy_rate": "15/15 (100%)",
+      "filter_compliance": "N/A (không áp dụng filter)"
+    },
+    "strategy_C": {
+      "records_checked": 15,
+      "valid_records": 15,
+      "accuracy_rate": "15/15 (100%)",
+      "filter_compliance": "1/1 (100% trong test set), 4/4 (100% trên toàn bộ câu có filter)"
+    }
+  }
+}
+

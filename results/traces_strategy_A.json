@@ -1,0 +1,842 @@
+[
+  {
+    "question_id": "q01",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "Một thuật toán học máy được định nghĩa cơ bản là thuật toán có khả năng làm gì?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 3,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "Một thuật toán học máy là thuật toán có khả năng học từ dữ liệu.",
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p3_fa000",
+        "page": 3,
+        "score": 0.7004,
+        "is_evidence_hit": true,
+        "section": "5.1 Learning algorithms",
+        "text_snippet": "góp phần thúc đẩy sự phát triển các thuật toán DL nhằm vượt qua những trở ngại này. 5.1 Learning algorithms Một thuật toán học máy là thuật toán có khả năng học từ dữ liệu. Nhưng t..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p13_fa001",
+        "page": 13,
+        "score": 0.6016,
+        "is_evidence_hit": false,
+        "section": "5.1.4 Ví dụ: hồi quy tuyến tính",
+        "text_snippet": "hiệu năng của một chương trình máy tính trong một số tác vụ thông qua những kinh nghiệm thu được, nhưng đây vẫn là một định nghĩa khá mơ hồ và trừu tượng. Để mô tả một cách cụ thể ..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p3_fa002",
+        "page": 3,
+        "score": 0.5953,
+        "is_evidence_hit": false,
+        "section": "5.1 Learning algorithms",
+        "text_snippet": "g hiệu năng và các kinh nghiệm có thể được sử dụng để xây dựng các thuật toán ML. 5.1.1 Tác vụ ML cho phép ta xử lý những tác vụ quá phức tạp được giải quyết bằng các chương trình ..."
+      }
+    ]
+  },
+  {
+    "question_id": "q02",
+    "split": "dev",
+    "type": "dien_dat_lai",
+    "question": "Các feature của một hình ảnh trong bài toán Machine Learning thường là gì?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 4,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "các feature của hình ảnh thường là giá trị của các pixel trong ảnh.",
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p4_fa000",
+        "page": 4,
+        "score": 0.6567,
+        "is_evidence_hit": true,
+        "section": "5.1 Learning algorithms",
+        "text_snippet": "trong đó mỗi phần tử của vector tương ứng với một feature khác nhau. Ví dụ: các feature của hình ảnh thường là giá trị của các pixel trong ảnh. Có nhiều loại tác vụ có thể được giả..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p3_fa003",
+        "page": 3,
+        "score": 0.5312,
+        "is_evidence_hit": false,
+        "section": "5.1 Learning algorithms",
+        "text_snippet": "một tác vụ. Học là phương tiện để giúp ta đạt được khả năng thực hiện các tác vụ. Chẳng hạn, nếu ta muốn một robot có thể đi bộ, thì việc đi bộ là tác vụ. Ta có thể lập trình để ro..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p12_fa003",
+        "page": 12,
+        "score": 0.5191,
+        "is_evidence_hit": false,
+        "section": "5.1.3 Kinh nghiệm",
+        "text_snippet": "phần tử: . Ký hiệu này không bắt buộc hai vector của hai mẫu bất kỳ và có cùng kích thước với nhau. Trong học có giám sát, mẫu dữ liệu chứa một nhãn đi kèm với một tập các đặc trưn..."
+      }
+    ]
+  },
+  {
+    "question_id": "q03",
+    "split": "dev",
+    "type": "filter_metadata",
+    "question": "Trong tác vụ tổng hợp và lấy mẫu, thuật toán ML được yêu cầu tạo ra điều gì?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 7,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "thuật toán ML được yêu cầu tạo ra các mẫu dữ liệu mới tương tự như các mẫu dữ liệu trong dữ liệu huấn luyện.",
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p7_fa000",
+        "page": 7,
+        "score": 0.8524,
+        "is_evidence_hit": true,
+        "section": "5.1 Learning algorithms",
+        "text_snippet": "Tổng hợp và lấy mẫu: Trong loại tác vụ này, thuật toán ML được yêu cầu tạo ra các mẫu dữ liệu mới tương tự như các mẫu dữ liệu trong dữ liệu huấn luyện. Tổng hợp và lấy mẫu thông q..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p7_fa002",
+        "page": 7,
+        "score": 0.6655,
+        "is_evidence_hit": false,
+        "section": "5.1 Learning algorithms",
+        "text_snippet": "ác duy nhất cho mỗi đầu vào, và rõ ràng rằng ta sẽ mong muốn một lượng lớn biến thể ở đầu ra, để đầu ra có vẻ tự nhiên và giống thật hơn. Gán giá trị khuyết: Trong loại tác vụ này,..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p25_fa002",
+        "page": 25,
+        "score": 0.6357,
+        "is_evidence_hit": false,
+        "section": "5.2.2 Cơ chế kiểm soát",
+        "text_snippet": "nghiệm, và các loại thuật toán ML nào hoạt động tốt trên dữ liệu được lấy ra từ các loại phân phối sinh dữ liệu mà ta quan tâm. 5.2.2 Cơ chế kiểm soát Luật bù trừ ngụ ý rằng ta phả..."
+      }
+    ]
+  },
+  {
+    "question_id": "q04",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "Tập dữ liệu hoa Diên Vĩ (Iris) đo đạc các bộ phận của bao nhiêu cá thể cây?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 10,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "tập dữ liệu đo đạc những phần khác nhau của 150 cá thể cây thuộc các loại Diên Vĩ khác nhau.",
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p10_fa000",
+        "page": 10,
+        "score": 0.8039,
+        "is_evidence_hit": true,
+        "section": "5.1.3 Kinh nghiệm",
+        "text_snippet": "tập dữ liệu đo đạc những phần khác nhau của 150 cá thể cây thuộc các loại Diên Vĩ khác nhau. Mỗi cá thể có một mẫu tương ứng. Các đặc trưng trong mỗi mẫu dữ liệu là kích thước của ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p9_fa004",
+        "page": 9,
+        "score": 0.6287,
+        "is_evidence_hit": false,
+        "section": "5.1.3 Kinh nghiệm",
+        "text_snippet": "huật toán ML trong cuốn sách này có thể được hiểu là được phép áp dụng toàn bộ tập dữ liệu. Một tập dữ liệu là một tập bao gồm rất nhiều mẫu dữ liệu, như được định nghĩa trong mục ..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p12_fa000",
+        "page": 12,
+        "score": 0.5527,
+        "is_evidence_hit": false,
+        "section": "5.1.3 Kinh nghiệm",
+        "text_snippet": "tập dữ liệu là một tập các mẫu dữ liệu, mà bản thân mỗi mẫu này là một tập của các đặc trưng. Một cách thông dụng để mô tả một tập dữ liệu là sử dụng ma trận thiết kế (design matri..."
+      }
+    ]
+  },
+  {
+    "question_id": "q05",
+    "split": "dev",
+    "type": "dien_dat_lai",
+    "question": "Trong các phép biến đổi tịnh tiến, hệ số chặn thường được gọi là gì?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 16,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "Hệ số chặn thường được gọi là hệ số tự do (bias) của phép biến đổi tịnh tiến.",
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p16_fa000",
+        "page": 16,
+        "score": 0.7315,
+        "is_evidence_hit": true,
+        "section": "5.2 Capacity, Overtting, Undertting",
+        "text_snippet": "Chúng tôi sẽ thường xuyên sử dụng thuật ngữ “tuyến tính” để ám chỉ những hàm tịnh tiến xuyên suốt cuốn sách này. Hệ số chặn thường được gọi là hệ số tự do (bias) của phép biến đổi ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p15_fa002",
+        "page": 15,
+        "score": 0.5768,
+        "is_evidence_hit": false,
+        "section": "5.1.4 Ví dụ: hồi quy tuyến tính",
+        "text_snippet": "vào – hệ số chặn (intercept) . Trong mô hình này do đó ánh xạ từ các tham số tới các kết quả dự đoán vẫn là hàm tuyến tính, nhưng ánh xạ từ các vector đặc trưng tới các kết quả dự ..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p15_fa001",
+        "page": 15,
+        "score": 0.4408,
+        "is_evidence_hit": false,
+        "section": "5.1.4 Ví dụ: hồi quy tuyến tính",
+        "text_snippet": "ấy, thuật toán hồi quy tuyến tính cố gắng học sao cho đường thẳng đi qua càng gần tất cả các điểm trong tập huấn luyện càng tốt. (Hình bên phải) Điểm in đậm màu xanh trên hình bên ..."
+      }
+    ]
+  },
+  {
+    "question_id": "q06",
+    "split": "dev",
+    "type": "filter_metadata",
+    "question": "Theo định lý No Free Lunch, có thuật toán ML nào luôn luôn tốt hơn các thuật toán còn lại không?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 25,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "không có thuật toán ML nào luôn luôn tốt hơn hơn các thuật toán ML còn lại.",
+    "hit_at_1": false,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p24_fa004",
+        "page": 24,
+        "score": 0.7254,
+        "is_evidence_hit": false,
+        "section": "5.2.1 Luật bù trừ",
+        "text_snippet": "a ra các quy tắc xác suất, thay vì toàn bộ các quy tắc tất định được sử dụng trong lý luận thuần logic. ML hứa hẹn tìm ra các quy tắc có thể đúng với hầu hết các thành viên của tập..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p25_fa000",
+        "page": 25,
+        "score": 0.6571,
+        "is_evidence_hit": true,
+        "section": "5.2.2 Cơ chế kiểm soát",
+        "text_snippet": "từng được quan sát. Nói cách khác, theo một nghĩa nào đó, không có thuật toán ML nào luôn luôn tốt hơn hơn các thuật toán ML còn lại. Thuật toán phức tạp nhất ta có thể hình dung c..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p24_fa003",
+        "page": 24,
+        "score": 0.5405,
+        "is_evidence_hit": false,
+        "section": "5.2.1 Luật bù trừ",
+        "text_snippet": "huật toán ML có thể khái quát tốt từ một tập hữu hạn các mẫu huấn luyện. Điều này có vẻ như mâu thuẫn với một số nguyên lý logic cơ bản. Lập luận quy nạp hoặc suy luận ra các quy t..."
+      }
+    ]
+  },
+  {
+    "question_id": "q07",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "Tập validation được sử dụng để làm gì đối với các siêu tham số trong quá trình huấn luyện?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 29,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "cho phép các siêu tham số được cập nhật tương ứng.",
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p29_fa000",
+        "page": 29,
+        "score": 0.7096,
+        "is_evidence_hit": true,
+        "section": "5.3.1 Kiểm chứng chéo",
+        "text_snippet": "hoá trong hoặc sau khi huấn luyện, cho phép các siêu tham số được cập nhật tương ứng. Tập dữ liệu con được sử dụng để học các tham số vẫn thường được gọi là tập huấn luyện, mặc dù ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p29_fa001",
+        "page": 29,
+        "score": 0.7068,
+        "is_evidence_hit": false,
+        "section": "5.3.1 Kiểm chứng chéo",
+        "text_snippet": "ữ liệu huấn luyện để huấn luyện và để xác thực. Vì tập xác thực được sử dụng để \"huấn luyện\" các siêu tham số, sai số xác thực (validation error) sẽ thường nhỏ hơn sai số tổng quát..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p28_fa004",
+        "page": 28,
+        "score": 0.638,
+        "is_evidence_hit": false,
+        "section": "5.3 Siêu tham số và tập xác thực",
+        "text_snippet": "mẫu kiểm thử không được tham gia bằng bất kỳ cách nào trong quá trình đưa ra các lựa chọn của mô hình, bao gồm cả việc lựa các siêu tham số. Vì lý do này, không có mẫu dữ liệu nào ..."
+      }
+    ]
+  },
+  {
+    "question_id": "q08",
+    "split": "dev",
+    "type": "dien_dat_lai",
+    "question": "Điều kiện mô tả sự hội tụ theo xác suất trong phương trình 5.55 được gọi là gì?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 39,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "Điều kiện được mô tả bởi phương trình (5.55) được gọi là tính nhất quán (consistency).",
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p39_fa000",
+        "page": 39,
+        "score": 0.7052,
+        "is_evidence_hit": true,
+        "section": "5.5 Maximum likelihood estimation",
+        "text_snippet": "Ký hiệu biểu thị sự hội tụ theo xác suất, có nghĩa là đối với bất kỳ nào, khi . Điều kiện được mô tả bởi phương trình (5.55) được gọi là tính nhất quán (consistency). Đôi khi, nó đ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p43_fa000",
+        "page": 43,
+        "score": 0.5093,
+        "is_evidence_hit": false,
+        "section": "5.5 Maximum likelihood estimation",
+        "text_snippet": "Với các điều kiện phù hợp, ước lượng sử dụng hợp lý cực đại có tính nhất quán (xem mục 5.4.5 ở trên), có nghĩa là khi số mẫu huấn luyện tiến tới vô cùng, ước lượng hợp lý cực đại c..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p39_fa004",
+        "page": 39,
+        "score": 0.4564,
+        "is_evidence_hit": false,
+        "section": "5.5 Maximum likelihood estimation",
+        "text_snippet": "hóa bởi . Nói cách khác, ánh xạ bất kỳ một mẫu nào tới một số thực ước lượng xác suất thực sự . Ước lượng hợp lý tối đa cho sau đó được định nghĩa như sau: plim ϵ > 0 m →∞ θ^ θ x ,..."
+      }
+    ]
+  },
+  {
+    "question_id": "q09",
+    "split": "dev",
+    "type": "dieu_kien",
+    "question": "Khi ước lượng một giá trị đơn lẻ của tham số, phương pháp tiếp cận đó thuộc trường phái thống kê nào?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 44,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "thống kê tần suất (frequentist statistics) và các phương pháp tiếp cận dựa trên việc ước lượng một giá trị đơn lẻ",
+    "hit_at_1": false,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p32_fa000",
+        "page": 32,
+        "score": 0.6324,
+        "is_evidence_hit": false,
+        "section": "5.3.1 Kiểm chứng chéo",
+        "text_snippet": "Định nghĩa này của một ước lượng điểm là rất khái quát, và nó cho phép ta thiết kế các ước lượng một cách linh hoạt. Do đó, mặc dù gần như bất kỳ hàm số nào cũng đủ tiêu chuẩn để t..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p44_fa000",
+        "page": 44,
+        "score": 0.624,
+        "is_evidence_hit": true,
+        "section": "5.6 Thống kê Bayes",
+        "text_snippet": "5.6 Thống kê Bayes Cho đến nay, ta đã thảo luận về thống kê tần suất (frequentist statistics) và các phương pháp tiếp cận dựa trên việc ước lượng một giá trị đơn lẻ của , sau đó th..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p43_fa002",
+        "page": 43,
+        "score": 0.5977,
+        "is_evidence_hit": false,
+        "section": "5.5 Maximum likelihood estimation",
+        "text_snippet": "n với một số lượng mẫu cố định, nói cách khác, ước lượng đó có thể chỉ cần một số lượng mẫu ít hơn để đạt được một mức sai số tổng quát hoá cố định. Tính hiệu quả thống kê thường đ..."
+      }
+    ]
+  },
+  {
+    "question_id": "q10",
+    "split": "dev",
+    "type": "filter_metadata",
+    "question": "Thủ thuật chọn hàm lõi (kernel trick) tương đương với việc thực hiện điều gì trên dữ liệu?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 51,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "Hàm lõi tương đương với việc tiền xử lý dữ liệu bằng hàm",
+    "hit_at_1": false,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p50_fa002",
+        "page": 50,
+        "score": 0.7873,
+        "is_evidence_hit": false,
+        "section": "5.7.2 Support Vector Machine",
+        "text_snippet": "hững phát kiến quan trọng nhất liên quan tới SVM đó là thủ thuật chọn hàm lõi (kernel trick). Thủ thuật chọn hàm lõi bắt nguồn từ nhận xét rằng rất nhiều các thuật toán ML có thể c..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p51_fa000",
+        "page": 51,
+        "score": 0.7239,
+        "is_evidence_hit": true,
+        "section": "5.7.2 Support Vector Machine",
+        "text_snippet": "Đối với biến thì đây là một hàm phi tuyến, nhưng mối quan hệ giữa và là tuyến tính. Hàm lõi tương đương với việc tiền xử lý dữ liệu bằng hàm , sau đó học một mô hình tuyến tính trê..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p52_fa000",
+        "page": 52,
+        "score": 0.6909,
+        "is_evidence_hit": false,
+        "section": "5.11\nk",
+        "text_snippet": "của nhiều nhãn huấn luyện, được đánh trọng số theo độ tương tự của các mẫu huấn luyện tương ứng. SVM không phải thuật toán duy nhất được tăng cường sức mạnh nhờ thủ thuật chọn hàm ..."
+      }
+    ]
+  },
+  {
+    "question_id": "q11",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "Đầu ra của thuật toán k-NN đối với một điểm mới là gì?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 53,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "Đầu ra của thuật toán chính là giá trị trung bình của các đầu ra ứng với điểm gần nhất vừa tìm được.",
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p53_fa000",
+        "page": 53,
+        "score": 0.6453,
+        "is_evidence_hit": true,
+        "section": "5.11\nk",
+        "text_snippet": "điểm gần nhất của trong tập dữ liệu huấn luyện . Đầu ra của thuật toán chính là giá trị trung bình của các đầu ra ứng với điểm gần nhất vừa tìm được. Thuật toán này về cơ bản là có..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p53_fa004",
+        "page": 53,
+        "score": 0.591,
+        "is_evidence_hit": false,
+        "section": "5.11\nk",
+        "text_snippet": ", nhưng chỉ có một biến duy nhất có liên quan đến đầu ra. Giả sử rằng biến này trực tiếp mã hóa đầu ra, nghĩa là trong mọi trường hợp. Hồi quy điểm gần nhất không thể phát hiện đượ..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p52_fa004",
+        "page": 52,
+        "score": 0.5903,
+        "is_evidence_hit": false,
+        "section": "5.11\nk",
+        "text_snippet": "g bị hạn chế bởi một số lượng tham số cố định. Khi nhắc đến thuật toán điểm gần nhất, ta thường nghĩ đến nó bởi tính chất không có tham số thay vì là thuật toán thực thi một hàm đơ..."
+      }
+    ]
+  },
+  {
+    "question_id": "q12",
+    "split": "dev",
+    "type": "dien_dat_lai",
+    "question": "Điểm khác biệt cốt lõi của các thuật toán học không giám sát là gì?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 56,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "các thuật toán không giám sát là những thuật toán chỉ dựa trên những \"đặc trưng\" chứ không phải một tín hiệu giám sát.",
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p56_fa000",
+        "page": 56,
+        "score": 0.7705,
+        "is_evidence_hit": true,
+        "section": "5.8 Các thuật toán học không giám",
+        "text_snippet": "Ta đã biết trong phần 5.1.3 rằng các thuật toán không giám sát là những thuật toán chỉ dựa trên những \"đặc trưng\" chứ không phải một tín hiệu giám sát. Sự khác biệt giữa thuật toán..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p10_fa001",
+        "page": 10,
+        "score": 0.5994,
+        "is_evidence_hit": false,
+        "section": "5.1.3 Kinh nghiệm",
+        "text_snippet": "hông giám sát áp dụng trên một tập dữ liệu bao gồm nhiều đặc trưng, và chúng học những đặc tính hữu dụng ẩn sau cấu trúc của tập dữ liệu này. Ở khía cạnh DL, ta thường mong muốn là..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p10_fa004",
+        "page": 10,
+        "score": 0.588,
+        "is_evidence_hit": false,
+        "section": "5.1.3 Kinh nghiệm",
+        "text_snippet": "của từ , thường thông qua ước lượng xác suất . Thuật ngữ học có giám sát bắt nguồn từ góc nhìn là giá trị đích được đưa ra bởi một giáo viên hay một hướng dẫn viên, để chỉ cho hệ t..."
+      }
+    ]
+  },
+  {
+    "question_id": "q13",
+    "split": "dev",
+    "type": "dieu_kien",
+    "question": "Khi số chiều của dữ liệu tăng lên, số lượng cấu hình cần xét đến có thể thay đổi như thế nào?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 66,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "Khi số chiều của dữ liệu tăng lên (từ trái qua phải), số lượng cấu hình cần xét đến có thể tăng theo cấp số mũ.",
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p66_fa000",
+        "page": 66,
+        "score": 0.8309,
+        "is_evidence_hit": true,
+        "section": "5.11 Những thách thức thúc đẩy sự",
+        "text_snippet": "Hình 5.9: Khi số chiều của dữ liệu tăng lên (từ trái qua phải), số lượng cấu hình cần xét đến có thể tăng theo cấp số mũ. (Trái) Trong ví dụ một chiều này, ta có một biến mà ở đó c..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p66_fa001",
+        "page": 66,
+        "score": 0.6885,
+        "is_evidence_hit": false,
+        "section": "5.11 Những thách thức thúc đẩy sự",
+        "text_snippet": "(và có thể nội suy giữa các vùng lân cận). (Giữa) Với dữ liệu hai chiều, việc phân biệt giá trị khác nhau của mỗi biến sẽ trở nên khó khăn hơn. Ta phải theo dõi đến vùng, và cần ít..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p66_fa002",
+        "page": 66,
+        "score": 0.6764,
+        "is_evidence_hit": false,
+        "section": "5.11 Những thách thức thúc đẩy sự",
+        "text_snippet": "ều lớn. Hình ảnh được cung cấp bởi Nicolas Chapados. Một thách thức đặt ra bởi hiểm họa số chiều lớn là thách thức về thống kê. Như mô tả trong hình 5.9, thách thức về thống kê xuấ..."
+      }
+    ]
+  },
+  {
+    "question_id": "q14",
+    "split": "dev",
+    "type": "truc_tiep",
+    "question": "Về mặt toán học, một đa tạp (manifold) được định nghĩa là gì?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 71,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "Một đa tạp là một vùng liên thông. Về mặt toán học, nó là một tập hợp các điểm liên kết với một lân cận xung quanh mỗi điểm.",
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p71_fa000",
+        "page": 71,
+        "score": 0.6893,
+        "is_evidence_hit": true,
+        "section": "5.11.3 Manifold",
+        "text_snippet": "việc sử dụng các biểu diễn phân tán đa tầng để đối phó với những thách thức theo cấp số mũ gây bởi hiểm họa số chiều lớn. 5.11.3 Manifold Một khái niệm quan trọng làm nền tảng cho ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p71_fa002",
+        "page": 71,
+        "score": 0.584,
+        "is_evidence_hit": false,
+        "section": "5.11.3 Manifold",
+        "text_snippet": "án học chính thức để diễn tả ý nghĩa của từ “đa tạp”, nhưng trong ML, nó được sử dụng một cách đại khái để chỉ định một tập hợp các điểm liên thông với nhau mà ta có thể xấp xỉ gần..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p71_fa001",
+        "page": 71,
+        "score": 0.5747,
+        "is_evidence_hit": false,
+        "section": "5.11.3 Manifold",
+        "text_snippet": "ày, ta thường nghĩ bề mặt của Trái Đất là một mặt phẳng 2 chiều, nhưng thực tế nó là một đa tạp hình cầu trong không gian 3 chiều. Khái niệm về một lân cận xung quanh mỗi điểm ngụ ..."
+      }
+    ]
+  },
+  {
+    "question_id": "q15",
+    "split": "dev",
+    "type": "dien_dat_lai",
+    "question": "Các thuật toán học có giám sát nói chung học mối liên kết giữa những yếu tố nào?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 49,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "các thuật toán học có giám sát, nói chung, là các thuật toán học được mối liên kết giữa một đầu vào và một đầu ra",
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p49_fa000",
+        "page": 49,
+        "score": 0.8036,
+        "is_evidence_hit": true,
+        "section": "5.7 Các thuật toán học có giám sát",
+        "text_snippet": "5.7 Các thuật toán học có giám sát Như đã được thảo luận trong phần 5.1.3, các thuật toán học có giám sát, nói chung, là các thuật toán học được mối liên kết giữa một đầu vào và mộ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p10_fa002",
+        "page": 10,
+        "score": 0.657,
+        "is_evidence_hit": false,
+        "section": "5.1.3 Kinh nghiệm",
+        "text_snippet": ", giúp việc phân chia tập dữ liệu thành các cụm chứa các mẫu có sự tương đồng lớn với nhau. Các thuật toán học có giám sát áp dụng trên một tập dữ liệu chứa nhiều đặc trưng, và mỗi..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p10_fa004",
+        "page": 10,
+        "score": 0.6435,
+        "is_evidence_hit": false,
+        "section": "5.1.3 Kinh nghiệm",
+        "text_snippet": "của từ , thường thông qua ước lượng xác suất . Thuật ngữ học có giám sát bắt nguồn từ góc nhìn là giá trị đích được đưa ra bởi một giáo viên hay một hướng dẫn viên, để chỉ cho hệ t..."
+      }
+    ]
+  },
+  {
+    "question_id": "q16",
+    "split": "test",
+    "type": "truc_tiep",
+    "question": "Các yếu tố quyết định để đánh giá một thuật toán ML có tốt hay không là khả năng của nó khi làm gì?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 18,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "Các yếu tố quyết định để đánh giá một thuật toán ML có tốt hay không là khả năng của nó khi làm cho",
+    "hit_at_1": false,
+    "evidence_hit_at_3": false,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p8_fa002",
+        "page": 8,
+        "score": 0.6683,
+        "is_evidence_hit": false,
+        "section": "5.1.2 Đánh giá hiệu năng",
+        "text_snippet": "h giá hiệu năng Để đánh giá khả năng của một thuật toán ML, ta cần xây dựng một phương thức đo đạc một cách định lượng hiệu năng của nó. Thông thường, phương pháp đo đạc hiệu năng ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p25_fa000",
+        "page": 25,
+        "score": 0.6079,
+        "is_evidence_hit": false,
+        "section": "5.2.2 Cơ chế kiểm soát",
+        "text_snippet": "từng được quan sát. Nói cách khác, theo một nghĩa nào đó, không có thuật toán ML nào luôn luôn tốt hơn hơn các thuật toán ML còn lại. Thuật toán phức tạp nhất ta có thể hình dung c..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p8_fa004",
+        "page": 8,
+        "score": 0.6079,
+        "is_evidence_hit": false,
+        "section": "5.1.2 Đánh giá hiệu năng",
+        "text_snippet": "có nhiều ý nghĩa. Thay vào đó, ta cần sử dụng một thông số hiệu năng khác cho phép mô hình trả về một giá trị liên tục cho mỗi mẫu. Phương pháp tiếp cận phổ biến nhất là sử dụng tr..."
+      }
+    ]
+  },
+  {
+    "question_id": "q17",
+    "split": "test",
+    "type": "dien_dat_lai",
+    "question": "Thủ thuật chọn hàm lõi trong SVM được đánh giá là một công cụ mạnh mẽ bởi mấy lý do?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 51,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "Thủ thuật chọn hãm lõi là một công cụ mạnh mẽ bởi hai lý do.",
+    "hit_at_1": false,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p50_fa002",
+        "page": 50,
+        "score": 0.7621,
+        "is_evidence_hit": false,
+        "section": "5.7.2 Support Vector Machine",
+        "text_snippet": "hững phát kiến quan trọng nhất liên quan tới SVM đó là thủ thuật chọn hàm lõi (kernel trick). Thủ thuật chọn hàm lõi bắt nguồn từ nhận xét rằng rất nhiều các thuật toán ML có thể c..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p52_fa000",
+        "page": 52,
+        "score": 0.7312,
+        "is_evidence_hit": false,
+        "section": "5.11\nk",
+        "text_snippet": "của nhiều nhãn huấn luyện, được đánh trọng số theo độ tương tự của các mẫu huấn luyện tương ứng. SVM không phải thuật toán duy nhất được tăng cường sức mạnh nhờ thủ thuật chọn hàm ..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p51_fa000",
+        "page": 51,
+        "score": 0.6705,
+        "is_evidence_hit": true,
+        "section": "5.7.2 Support Vector Machine",
+        "text_snippet": "Đối với biến thì đây là một hàm phi tuyến, nhưng mối quan hệ giữa và là tuyến tính. Hàm lõi tương đương với việc tiền xử lý dữ liệu bằng hàm , sau đó học một mô hình tuyến tính trê..."
+      }
+    ]
+  },
+  {
+    "question_id": "q18",
+    "split": "test",
+    "type": "filter_metadata",
+    "question": "Trong một tác vụ dịch máy, đầu vào được cung cấp cho hệ thống là gì?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 5,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "Dịch máy: Trong một tác vụ dịch máy, đầu vào đã bao gồm một chuỗi các ký tự trong một số ngôn ngữ",
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p5_fa004",
+        "page": 5,
+        "score": 0.6438,
+        "is_evidence_hit": true,
+        "section": "5.1 Learning algorithms",
+        "text_snippet": "n et al., 2012b]. Dịch máy: Trong một tác vụ dịch máy, đầu vào đã bao gồm một chuỗi các ký tự trong một số ngôn ngữ, và chương trình máy tính phải chuyển đổi chúng thành chuỗi ký t..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p3_fa003",
+        "page": 3,
+        "score": 0.5441,
+        "is_evidence_hit": false,
+        "section": "5.1 Learning algorithms",
+        "text_snippet": "một tác vụ. Học là phương tiện để giúp ta đạt được khả năng thực hiện các tác vụ. Chẳng hạn, nếu ta muốn một robot có thể đi bộ, thì việc đi bộ là tác vụ. Ta có thể lập trình để ro..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p5_fa002",
+        "page": 5,
+        "score": 0.5371,
+        "is_evidence_hit": false,
+        "section": "5.1 Learning algorithms",
+        "text_snippet": "đoán này cũng được sử dụng cho các giao dịch dựa trên thuật toán. Phiên mã: Trong loại tác vụ này, hệ thống ML được yêu cầu quan sát một biểu diễn tương đối không có cấu trúc của m..."
+      }
+    ]
+  },
+  {
+    "question_id": "q19",
+    "split": "test",
+    "type": "dieu_kien",
+    "question": "Tại sao khi tính toán thống kê với một số lượng mẫu hữu hạn, kết quả ước lượng tham số lại có tính bất định?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 36,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "Khi tính toán bất kỳ thống kê nào với một số lượng mẫu hữu hạn, kết quả ước lượng tham số của ta là bất định",
+    "hit_at_1": true,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p36_fa000",
+        "page": 36,
+        "score": 0.7354,
+        "is_evidence_hit": true,
+        "section": "5.4.3 Phương sai và sai số chuẩn",
+        "text_snippet": "Khi tính toán bất kỳ thống kê nào với một số lượng mẫu hữu hạn, kết quả ước lượng tham số của ta là bất định, theo nghĩa là có thể ta sẽ thu được các mẫu khác hẳn từ cùng một phân ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p43_fa002",
+        "page": 43,
+        "score": 0.5908,
+        "is_evidence_hit": false,
+        "section": "5.5 Maximum likelihood estimation",
+        "text_snippet": "n với một số lượng mẫu cố định, nói cách khác, ước lượng đó có thể chỉ cần một số lượng mẫu ít hơn để đạt được một mức sai số tổng quát hoá cố định. Tính hiệu quả thống kê thường đ..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p39_fa001",
+        "page": 39,
+        "score": 0.5776,
+        "is_evidence_hit": false,
+        "section": "5.5 Maximum likelihood estimation",
+        "text_snippet": "chệch do hàm ước lượng gây ra sẽ giảm đi khi số lượng mẫu dữ liệu tăng lên. Tuy nhiên, điều ngược lại không đúng - một hàm ước lượng không chệch về mặt tiệm cận không có nghĩa là n..."
+      }
+    ]
+  },
+  {
+    "question_id": "q20",
+    "split": "test",
+    "type": "dien_dat_lai",
+    "question": "Mục tiêu thúc đẩy sự phát triển các thuật toán Deep Learning là để vượt qua điều gì?",
+    "strategy": "A",
+    "filter_applied": null,
+    "gold_page": 3,
+    "gold_source_id": "dlbookvn-chap05",
+    "evidence_quote": "góp phần thúc đẩy sự phát triển các thuật toán DL nhằm vượt qua những trở ngại này.",
+    "hit_at_1": false,
+    "evidence_hit_at_3": true,
+    "hits": [
+      {
+        "rank": 1,
+        "chunk_id": "dlbookvn-chap05_p65_fa001",
+        "page": 65,
+        "score": 0.6587,
+        "is_evidence_hit": false,
+        "section": "5.11 Những thách thức thúc đẩy sự",
+        "text_snippet": "pháp thực hiện những tác vụ có liên quan, hơn là một danh sách dài các thuật toán mà mỗi trong số đó lại có các cách giải thích cách thức hoạt động riêng biệt. 5.11 Những thách thứ..."
+      },
+      {
+        "rank": 2,
+        "chunk_id": "dlbookvn-chap05_p65_fa002",
+        "page": 65,
+        "score": 0.5651,
+        "is_evidence_hit": false,
+        "section": "5.11 Những thách thức thúc đẩy sự",
+        "text_snippet": "iển của DL có được thúc đẩy một phần từ những thất bại của các thuật toán truyền thống trong việc đạt được sự tổng quát hóa tốt trong các tác vụ AI. Phần này thảo luận về việc nhữn..."
+      },
+      {
+        "rank": 3,
+        "chunk_id": "dlbookvn-chap05_p3_fa000",
+        "page": 3,
+        "score": 0.5523,
+        "is_evidence_hit": true,
+        "section": "5.1 Learning algorithms",
+        "text_snippet": "góp phần thúc đẩy sự phát triển các thuật toán DL nhằm vượt qua những trở ngại này. 5.1 Learning algorithms Một thuật toán học máy là thuật toán có khả năng học từ dữ liệu. Nhưng t..."
+      }
+    ]
+  }
+]

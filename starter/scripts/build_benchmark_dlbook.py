@@ -1,0 +1,253 @@
+import pymupdf
+import json
+import os
+
+def norm(s):
+    return ' '.join(s.split())
+
+doc = pymupdf.open('starter/data/dlbookvn_chap05.pdf')
+
+questions = [
+  {
+    'id': 'q01',
+    'split': 'dev',
+    'type': 'truc_tiep',
+    'question': 'Một thuật toán học máy được định nghĩa cơ bản là thuật toán có khả năng làm gì?',
+    'expected_answer': 'Có khả năng học từ dữ liệu',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 3,
+    'evidence_quote': 'Một thuật toán học máy là thuật toán có khả năng học từ dữ liệu.',
+    'filter': None
+  },
+  {
+    'id': 'q02',
+    'split': 'dev',
+    'type': 'dien_dat_lai',
+    'question': 'Các feature của một hình ảnh trong bài toán Machine Learning thường là gì?',
+    'expected_answer': 'Giá trị của các pixel trong ảnh',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 4,
+    'evidence_quote': 'các feature của hình ảnh thường là giá trị của các pixel trong ảnh.',
+    'filter': None
+  },
+  {
+    'id': 'q03',
+    'split': 'dev',
+    'type': 'filter_metadata',
+    'question': 'Trong tác vụ tổng hợp và lấy mẫu, thuật toán ML được yêu cầu tạo ra điều gì?',
+    'expected_answer': 'Tạo ra các mẫu dữ liệu mới tương tự như các mẫu dữ liệu trong dữ liệu huấn luyện',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 7,
+    'evidence_quote': 'thuật toán ML được yêu cầu tạo ra các mẫu dữ liệu mới tương tự như các mẫu dữ liệu trong dữ liệu huấn luyện.',
+    'filter': {'section': '5.1 Learning algorithms'}
+  },
+  {
+    'id': 'q04',
+    'split': 'dev',
+    'type': 'truc_tiep',
+    'question': 'Tập dữ liệu hoa Diên Vĩ (Iris) đo đạc các bộ phận của bao nhiêu cá thể cây?',
+    'expected_answer': '150 cá thể cây thuộc các loại Diên Vĩ khác nhau',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 10,
+    'evidence_quote': 'tập dữ liệu đo đạc những phần khác nhau của 150 cá thể cây thuộc các loại Diên Vĩ khác nhau.',
+    'filter': None
+  },
+  {
+    'id': 'q05',
+    'split': 'dev',
+    'type': 'dien_dat_lai',
+    'question': 'Trong các phép biến đổi tịnh tiến, hệ số chặn thường được gọi là gì?',
+    'expected_answer': 'Hệ số tự do (bias) của phép biến đổi tịnh tiến',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 16,
+    'evidence_quote': 'Hệ số chặn thường được gọi là hệ số tự do (bias) của phép biến đổi tịnh tiến.',
+    'filter': None
+  },
+  {
+    'id': 'q06',
+    'split': 'dev',
+    'type': 'filter_metadata',
+    'question': 'Theo định lý No Free Lunch, có thuật toán ML nào luôn luôn tốt hơn các thuật toán còn lại không?',
+    'expected_answer': 'Không có thuật toán ML nào luôn luôn tốt hơn hơn các thuật toán ML còn lại',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 25,
+    'evidence_quote': 'không có thuật toán ML nào luôn luôn tốt hơn hơn các thuật toán ML còn lại.',
+    'filter': {'section': '5.2 Capacity, Overfitting, Underfitting'}
+  },
+  {
+    'id': 'q07',
+    'split': 'dev',
+    'type': 'truc_tiep',
+    'question': 'Tập validation được sử dụng để làm gì đối với các siêu tham số trong quá trình huấn luyện?',
+    'expected_answer': 'Cho phép các siêu tham số được cập nhật tương ứng',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 29,
+    'evidence_quote': 'cho phép các siêu tham số được cập nhật tương ứng.',
+    'filter': None
+  },
+  {
+    'id': 'q08',
+    'split': 'dev',
+    'type': 'dien_dat_lai',
+    'question': 'Điều kiện mô tả sự hội tụ theo xác suất trong phương trình 5.55 được gọi là gì?',
+    'expected_answer': 'Tính nhất quán (consistency)',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 39,
+    'evidence_quote': 'Điều kiện được mô tả bởi phương trình (5.55) được gọi là tính nhất quán (consistency).',
+    'filter': None
+  },
+  {
+    'id': 'q09',
+    'split': 'dev',
+    'type': 'dieu_kien',
+    'question': 'Khi ước lượng một giá trị đơn lẻ của tham số, phương pháp tiếp cận đó thuộc trường phái thống kê nào?',
+    'expected_answer': 'Thống kê tần suất (frequentist statistics)',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 44,
+    'evidence_quote': 'thống kê tần suất (frequentist statistics) và các phương pháp tiếp cận dựa trên việc ước lượng một giá trị đơn lẻ',
+    'filter': None
+  },
+  {
+    'id': 'q10',
+    'split': 'dev',
+    'type': 'filter_metadata',
+    'question': 'Thủ thuật chọn hàm lõi (kernel trick) tương đương với việc thực hiện điều gì trên dữ liệu?',
+    'expected_answer': 'Tiền xử lý dữ liệu bằng hàm phi tuyến sau đó học mô hình tuyến tính trên không gian mới',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 51,
+    'evidence_quote': 'Hàm lõi tương đương với việc tiền xử lý dữ liệu bằng hàm',
+    'filter': {'section': '5.7 Các thuật toán học có giám sát'}
+  },
+  {
+    'id': 'q11',
+    'split': 'dev',
+    'type': 'truc_tiep',
+    'question': 'Đầu ra của thuật toán k-NN đối với một điểm mới là gì?',
+    'expected_answer': 'Giá trị trung bình của các đầu ra ứng với điểm gần nhất vừa tìm được',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 53,
+    'evidence_quote': 'Đầu ra của thuật toán chính là giá trị trung bình của các đầu ra ứng với điểm gần nhất vừa tìm được.',
+    'filter': None
+  },
+  {
+    'id': 'q12',
+    'split': 'dev',
+    'type': 'dien_dat_lai',
+    'question': 'Điểm khác biệt cốt lõi của các thuật toán học không giám sát là gì?',
+    'expected_answer': 'Chỉ dựa trên những đặc trưng chứ không phải một tín hiệu giám sát',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 56,
+    'evidence_quote': 'các thuật toán không giám sát là những thuật toán chỉ dựa trên những "đặc trưng" chứ không phải một tín hiệu giám sát.',
+    'filter': None
+  },
+  {
+    'id': 'q13',
+    'split': 'dev',
+    'type': 'dieu_kien',
+    'question': 'Khi số chiều của dữ liệu tăng lên, số lượng cấu hình cần xét đến có thể thay đổi như thế nào?',
+    'expected_answer': 'Có thể tăng theo cấp số mũ',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 66,
+    'evidence_quote': 'Khi số chiều của dữ liệu tăng lên (từ trái qua phải), số lượng cấu hình cần xét đến có thể tăng theo cấp số mũ.',
+    'filter': None
+  },
+  {
+    'id': 'q14',
+    'split': 'dev',
+    'type': 'truc_tiep',
+    'question': 'Về mặt toán học, một đa tạp (manifold) được định nghĩa là gì?',
+    'expected_answer': 'Một tập hợp các điểm liên kết với một lân cận xung quanh mỗi điểm',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 71,
+    'evidence_quote': 'Một đa tạp là một vùng liên thông. Về mặt toán học, nó là một tập hợp các điểm liên kết với một lân cận xung quanh mỗi điểm.',
+    'filter': None
+  },
+  {
+    'id': 'q15',
+    'split': 'dev',
+    'type': 'dien_dat_lai',
+    'question': 'Các thuật toán học có giám sát nói chung học mối liên kết giữa những yếu tố nào?',
+    'expected_answer': 'Học mối liên kết giữa một đầu vào và một đầu ra khi biết tập mẫu',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 49,
+    'evidence_quote': 'các thuật toán học có giám sát, nói chung, là các thuật toán học được mối liên kết giữa một đầu vào và một đầu ra',
+    'filter': None
+  },
+  {
+    'id': 'q16',
+    'split': 'test',
+    'type': 'truc_tiep',
+    'question': 'Các yếu tố quyết định để đánh giá một thuật toán ML có tốt hay không là khả năng của nó khi làm gì?',
+    'expected_answer': 'Khả năng làm giảm sai số huấn luyện và thu hẹp khoảng cách với sai số kiểm thử',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 18,
+    'evidence_quote': 'Các yếu tố quyết định để đánh giá một thuật toán ML có tốt hay không là khả năng của nó khi làm cho',
+    'filter': None
+  },
+  {
+    'id': 'q17',
+    'split': 'test',
+    'type': 'dien_dat_lai',
+    'question': 'Thủ thuật chọn hàm lõi trong SVM được đánh giá là một công cụ mạnh mẽ bởi mấy lý do?',
+    'expected_answer': 'Hai lý do',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 51,
+    'evidence_quote': 'Thủ thuật chọn hãm lõi là một công cụ mạnh mẽ bởi hai lý do.',
+    'filter': None
+  },
+  {
+    'id': 'q18',
+    'split': 'test',
+    'type': 'filter_metadata',
+    'question': 'Trong một tác vụ dịch máy, đầu vào được cung cấp cho hệ thống là gì?',
+    'expected_answer': 'Một chuỗi các ký tự trong một số ngôn ngữ',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 5,
+    'evidence_quote': 'Dịch máy: Trong một tác vụ dịch máy, đầu vào đã bao gồm một chuỗi các ký tự trong một số ngôn ngữ',
+    'filter': {'section': '5.1 Learning algorithms'}
+  },
+  {
+    'id': 'q19',
+    'split': 'test',
+    'type': 'dieu_kien',
+    'question': 'Tại sao khi tính toán thống kê với một số lượng mẫu hữu hạn, kết quả ước lượng tham số lại có tính bất định?',
+    'expected_answer': 'Vì có thể thu được các mẫu khác hẳn từ cùng một phân phối',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 36,
+    'evidence_quote': 'Khi tính toán bất kỳ thống kê nào với một số lượng mẫu hữu hạn, kết quả ước lượng tham số của ta là bất định',
+    'filter': None
+  },
+  {
+    'id': 'q20',
+    'split': 'test',
+    'type': 'dien_dat_lai',
+    'question': 'Mục tiêu thúc đẩy sự phát triển các thuật toán Deep Learning là để vượt qua điều gì?',
+    'expected_answer': 'Vượt qua những trở ngại và thách thức của các thuật toán ML truyền thống',
+    'gold_source_id': 'dlbookvn-chap05',
+    'gold_page': 3,
+    'evidence_quote': 'góp phần thúc đẩy sự phát triển các thuật toán DL nhằm vượt qua những trở ngại này.',
+    'filter': None
+  }
+]
+
+print(f"Checking {len(questions)} questions on dlbookvn_chap05.pdf...")
+all_ok = True
+for q in questions:
+    p = q['gold_page']
+    p_text = norm(doc[p-1].get_text())
+    ev = norm(q['evidence_quote'])
+    if ev in p_text:
+        print(f"OK: {q['id']} (Page {p})")
+    else:
+        print(f"ERROR: {q['id']} (Page {p}) -> {ev[:40]}")
+        all_ok = False
+
+if all_ok:
+    print("\nALL 20 BENCHMARK QUESTIONS 100% VERIFIED!")
+    os.makedirs('benchmark', exist_ok=True)
+    with open('benchmark/benchmark.json', 'w', encoding='utf-8') as f:
+        json.dump(questions, f, ensure_ascii=False, indent=2)
+    os.makedirs('starter/data', exist_ok=True)
+    with open('starter/data/benchmark.json', 'w', encoding='utf-8') as f:
+        json.dump(questions, f, ensure_ascii=False, indent=2)
+    print("Successfully saved benchmark.json to benchmark/ and starter/data/")

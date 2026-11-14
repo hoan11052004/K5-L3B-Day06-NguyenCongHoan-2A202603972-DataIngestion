@@ -1,0 +1,379 @@
+{
+  "source_id": "dlbookvn-chap05",
+  "title": "Sách Deep Learning (Bản dịch tiếng Việt) - Chương 5: Machine Learning cơ bản",
+  "source_path_or_url": "starter/data/dlbookvn_chap05.pdf",
+  "license_or_permission": "Bản dịch tiếng Việt phi thương mại cho cộng đồng học thuật (dlbookvietnam) từ cuốn Deep Learning (Ian Goodfellow, Yoshua Bengio, Aaron Courville)",
+  "accessed_at": "2026-11-14T11:00:00+07:00",
+  "version": "1.0",
+  "total_physical_pages": 75,
+  "useful_content_pages_count": 73,
+  "useful_pages_criteria": "Loại bỏ 2 trang đầu mục lục và đề mục; giữ 73 trang nội dung chuyên sâu từ trang 3 đến trang 75",
+  "total_characters": 144872,
+  "pages": [
+    {
+      "page": 3,
+      "section": "5.1 Learning algorithms",
+      "char_count": 1955
+    },
+    {
+      "page": 4,
+      "section": "5.1 Learning algorithms",
+      "char_count": 2386
+    },
+    {
+      "page": 5,
+      "section": "5.1 Learning algorithms",
+      "char_count": 2242
+    },
+    {
+      "page": 6,
+      "section": "5.1 Learning algorithms",
+      "char_count": 2385
+    },
+    {
+      "page": 7,
+      "section": "5.1 Learning algorithms",
+      "char_count": 2392
+    },
+    {
+      "page": 8,
+      "section": "5.1.2 Đánh giá hiệu năng",
+      "char_count": 2259
+    },
+    {
+      "page": 9,
+      "section": "5.1.3 Kinh nghiệm",
+      "char_count": 2213
+    },
+    {
+      "page": 10,
+      "section": "5.1.3 Kinh nghiệm",
+      "char_count": 2421
+    },
+    {
+      "page": 11,
+      "section": "5.1.3 Kinh nghiệm",
+      "char_count": 2102
+    },
+    {
+      "page": 12,
+      "section": "5.1.3 Kinh nghiệm",
+      "char_count": 2351
+    },
+    {
+      "page": 13,
+      "section": "5.1.4 Ví dụ: hồi quy tuyến tính",
+      "char_count": 2227
+    },
+    {
+      "page": 14,
+      "section": "5.1.4 Ví dụ: hồi quy tuyến tính",
+      "char_count": 1514
+    },
+    {
+      "page": 15,
+      "section": "5.1.4 Ví dụ: hồi quy tuyến tính",
+      "char_count": 1550
+    },
+    {
+      "page": 16,
+      "section": "5.2 Capacity, Overtting, Undertting",
+      "char_count": 2061
+    },
+    {
+      "page": 17,
+      "section": "5.2 Capacity, Overtting, Undertting",
+      "char_count": 2286
+    },
+    {
+      "page": 18,
+      "section": "5.2 Capacity, Overtting, Undertting",
+      "char_count": 2053
+    },
+    {
+      "page": 19,
+      "section": "5.2 Capacity, Overtting, Undertting",
+      "char_count": 1831
+    },
+    {
+      "page": 20,
+      "section": "5.2 Capacity, Overtting, Undertting",
+      "char_count": 2522
+    },
+    {
+      "page": 21,
+      "section": "5.2 Capacity, Overtting, Undertting",
+      "char_count": 2051
+    },
+    {
+      "page": 22,
+      "section": "5.2 Capacity, Overtting, Undertting",
+      "char_count": 2451
+    },
+    {
+      "page": 23,
+      "section": "5.2 Capacity, Overtting, Undertting",
+      "char_count": 1411
+    },
+    {
+      "page": 24,
+      "section": "5.2.1 Luật bù trừ",
+      "char_count": 2324
+    },
+    {
+      "page": 25,
+      "section": "5.2.2 Cơ chế kiểm soát",
+      "char_count": 2258
+    },
+    {
+      "page": 26,
+      "section": "5.5 để thấy kết quả.",
+      "char_count": 1909
+    },
+    {
+      "page": 27,
+      "section": "5.5 để thấy kết quả.",
+      "char_count": 2403
+    },
+    {
+      "page": 28,
+      "section": "5.3 Siêu tham số và tập xác thực",
+      "char_count": 2319
+    },
+    {
+      "page": 29,
+      "section": "5.3.1 Kiểm chứng chéo",
+      "char_count": 2413
+    },
+    {
+      "page": 30,
+      "section": "5.3.1 Kiểm chứng chéo",
+      "char_count": 2176
+    },
+    {
+      "page": 31,
+      "section": "5.3.1 Kiểm chứng chéo",
+      "char_count": 1371
+    },
+    {
+      "page": 32,
+      "section": "5.3.1 Kiểm chứng chéo",
+      "char_count": 2135
+    },
+    {
+      "page": 33,
+      "section": "5.3.1 Kiểm chứng chéo",
+      "char_count": 968
+    },
+    {
+      "page": 34,
+      "section": "5.3.1 Kiểm chứng chéo",
+      "char_count": 828
+    },
+    {
+      "page": 35,
+      "section": "5.4.3 Phương sai và sai số chuẩn",
+      "char_count": 1274
+    },
+    {
+      "page": 36,
+      "section": "5.4.3 Phương sai và sai số chuẩn",
+      "char_count": 2266
+    },
+    {
+      "page": 37,
+      "section": "5.4.3 Phương sai và sai số chuẩn",
+      "char_count": 1338
+    },
+    {
+      "page": 38,
+      "section": "5.2 và hình 5.3.",
+      "char_count": 1665
+    },
+    {
+      "page": 39,
+      "section": "5.5 Maximum likelihood estimation",
+      "char_count": 2229
+    },
+    {
+      "page": 40,
+      "section": "5.5 Maximum likelihood estimation",
+      "char_count": 1705
+    },
+    {
+      "page": 41,
+      "section": "5.5 Maximum likelihood estimation",
+      "char_count": 1979
+    },
+    {
+      "page": 42,
+      "section": "5.5 Maximum likelihood estimation",
+      "char_count": 1881
+    },
+    {
+      "page": 43,
+      "section": "5.5 Maximum likelihood estimation",
+      "char_count": 2276
+    },
+    {
+      "page": 44,
+      "section": "5.6 Thống kê Bayes",
+      "char_count": 2120
+    },
+    {
+      "page": 45,
+      "section": "5.6 Thống kê Bayes",
+      "char_count": 2215
+    },
+    {
+      "page": 46,
+      "section": "5.6 Thống kê Bayes",
+      "char_count": 1627
+    },
+    {
+      "page": 47,
+      "section": "5.6 Thống kê Bayes",
+      "char_count": 1828
+    },
+    {
+      "page": 48,
+      "section": "5.6 Thống kê Bayes",
+      "char_count": 2246
+    },
+    {
+      "page": 49,
+      "section": "5.7 Các thuật toán học có giám sát",
+      "char_count": 1932
+    },
+    {
+      "page": 50,
+      "section": "5.7.2 Support Vector Machine",
+      "char_count": 2068
+    },
+    {
+      "page": 51,
+      "section": "5.7.2 Support Vector Machine",
+      "char_count": 2336
+    },
+    {
+      "page": 52,
+      "section": "5.11\nk",
+      "char_count": 2259
+    },
+    {
+      "page": 53,
+      "section": "5.11\nk",
+      "char_count": 2804
+    },
+    {
+      "page": 54,
+      "section": "5.11\nk",
+      "char_count": 1625
+    },
+    {
+      "page": 55,
+      "section": "5.8 Các thuật toán học không giám",
+      "char_count": 1067
+    },
+    {
+      "page": 56,
+      "section": "5.8 Các thuật toán học không giám",
+      "char_count": 2583
+    },
+    {
+      "page": 57,
+      "section": "5.8.1 Phân tích thành phần chính",
+      "char_count": 1890
+    },
+    {
+      "page": 58,
+      "section": "5.8.1 Phân tích thành phần chính",
+      "char_count": 1659
+    },
+    {
+      "page": 59,
+      "section": "5.8.1 Phân tích thành phần chính",
+      "char_count": 1326
+    },
+    {
+      "page": 60,
+      "section": "5.8.2 Phân cụm -means",
+      "char_count": 2486
+    },
+    {
+      "page": 61,
+      "section": "5.9 Stochastic Gradient Descent",
+      "char_count": 2206
+    },
+    {
+      "page": 62,
+      "section": "5.9 Stochastic Gradient Descent",
+      "char_count": 1898
+    },
+    {
+      "page": 63,
+      "section": "5.10 Xây dựng một thuật toán ML",
+      "char_count": 2148
+    },
+    {
+      "page": 64,
+      "section": "5.10 Xây dựng một thuật toán ML",
+      "char_count": 1954
+    },
+    {
+      "page": 65,
+      "section": "5.11 Những thách thức thúc đẩy sự",
+      "char_count": 1918
+    },
+    {
+      "page": 66,
+      "section": "5.11 Những thách thức thúc đẩy sự",
+      "char_count": 1853
+    },
+    {
+      "page": 67,
+      "section": "5.11 Những thách thức thúc đẩy sự",
+      "char_count": 2252
+    },
+    {
+      "page": 68,
+      "section": "5.11 Những thách thức thúc đẩy sự",
+      "char_count": 2437
+    },
+    {
+      "page": 69,
+      "section": "5.11 Những thách thức thúc đẩy sự",
+      "char_count": 1928
+    },
+    {
+      "page": 70,
+      "section": "5.11 Những thách thức thúc đẩy sự",
+      "char_count": 2605
+    },
+    {
+      "page": 71,
+      "section": "5.11.3 Manifold",
+      "char_count": 1676
+    },
+    {
+      "page": 72,
+      "section": "5.11.3 Manifold",
+      "char_count": 1833
+    },
+    {
+      "page": 73,
+      "section": "5.11.3 Manifold",
+      "char_count": 383
+    },
+    {
+      "page": 74,
+      "section": "5.11.3 Manifold",
+      "char_count": 2617
+    },
+    {
+      "page": 75,
+      "section": "5.11.3 Manifold",
+      "char_count": 713
+    }
+  ]
+}
