@@ -82,10 +82,4 @@ C          | all    | 14/20 (70.0%)   | 18/20 (90.0%)      | 230      | 88.90
 ---
 
 
-```
-Hoặc từ thư mục gốc của repository:
-```bash
-python -m starter.src.run
-```
 
-Toàn bộ quá trình ingestion 3 chiến lược, embedding, upsert vào PostgreSQL, thực thi benchmark và xuất trace sẽ được tự động hoàn tất và hiển thị bảng kết quả tổng hợp.
